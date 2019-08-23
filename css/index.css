@@ -1,0 +1,431 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    text-decoration: none;
+}
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: block
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.2rem;
+    min-width: 320px;;
+}
+/* 头部样式 */
+header{
+    width: 100%;
+}
+header nav{
+    padding:0 1.5rem;
+}
+.top{
+    height: 3rem;
+    line-height: 3rem;
+    background: #333;
+    color: #fff;
+}
+.top p{
+    display:inline-block; 
+}
+.top .right-top{
+    float: right;
+}
+@media screen and (max-width:420px){
+    .top .left-top{
+        display: none;
+    }
+}
+.top-list{
+    background: #eee;
+    line-height: 5rem; 
+}
+.top-list p{
+    float:left;
+    width: 10rem;
+    height: 5rem;
+    font-size: 2.5em;
+
+}
+.top-list ul{
+    float:right;
+}
+.top-list li{
+    display: inline-block;
+    padding:0 20px;
+    border-right: 1px solid #ccc;
+    font-size: 16px;
+}
+.top-list li:last-child {
+    border-right: 0px;
+}
+@media screen and (max-width:700px){
+    .top-list p{
+        float:none;
+        margin:0 auto;
+    }
+    .top-list ul{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .top-list ul li:last-child{
+        display:none;
+    }
+}
+@media screen and (max-width:420px){
+    .top-list ul li:nth-child(4){
+        display:none;
+    }
+}
+/* 轮播图 */
+/*  */
+.wrapper{
+    position: relative;
+    margin-bottom: 30px;
+}
+.ppt-list{
+    width: 100%;
+    height: 300px;
+}
+.ppt-list .ppt{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 0 100px;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    overflow: hidden;
+}
+.ppt-list .ppt .tittle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    color: #fff;
+}
+.ppt-list .ppt:nth-of-type(1){    
+    background-image:url(../img/bg-1.jpg);
+}
+.ppt-list .ppt:nth-of-type(2){
+    display: none;
+    background-image:url(../img/bg-2.jpg);
+}
+.ppt-list .ppt:nth-of-type(3){
+    display: none;
+    background-image:url(../img/bg-3.jpg);
+}
+.ppt-list .ppt h1{
+    padding-top: 100px;
+}
+.ppt-list .ppt p{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* 左右按钮 */
+.btn{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top:-15px;
+
+}
+.btn .left-btn,.btn .right-btn{
+    display: inline-block;
+    width:30px;
+    height: 30px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.btn .left-btn{
+    float: left;
+    margin-left:20px;
+    background-image: url(../images/left-btn.png)
+}
+.btn .right-btn{
+    float: right;
+    margin-right: 20px;
+    background-image: url(../images/right-btn.png)
+}
+
+/* 小圆点样式 */
+.circle-list{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 30px;
+}
+.circle-list ul{
+    display: inline-block;
+}
+.circle-list ul li{
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    background:#666;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.circle-list ul .active{
+    background: #fff;
+}
+@media screen and(max-width:530px){
+    .ppt-list{
+        height: 200px;
+    }
+    .ppt-list .ppt{
+        height: 200px;
+    }
+}
+/* 讲师特点 */
+.feature{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+.feature .item{
+    flex-grow: 1;
+    width: 10rem;
+    margin-right: 2rem;
+    box-shadow: 0 0  4px #aaa;
+}
+.feature .item:last-child{
+    margin-right: 0;
+}
+.feature .item h3{
+    display: inline-block;
+    font-size: 3rem;
+    color: #2d78f4;
+    vertical-align:middle;
+    padding: 1rem;
+}
+.feature .item p{
+    display: inline-block;
+    font-size: 1.6rem;
+    color:#666;
+    padding: 1rem 0;
+    vertical-align: middle;
+}
+@media screen and (max-width:700px){
+    .feature .item h3,
+    .feature .item p{
+        display: block;
+        text-align: center;
+    }
+}
+@media screen and (max-width:420px){
+    .feature{
+        display: block;
+    }
+    .feature .item{
+        width: 100%;
+        margin-bottom: 1rem ;
+    }
+    .feature .item h3,
+    .feature .item p{
+        display: inline-block;
+        text-align: left;
+    }
+    .feature .item h3{
+        padding:0 3rem;
+    }
+}
+/* 课表 */
+.product{
+    display: flex;
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: 0 0 4px #ccc;
+    border-top: 2px solid #2d78f4;
+    background: #f5f9fa;
+}
+.product .tittle{
+    display: inline-block;
+    width: 20%;
+    text-align: center; 
+    color: #635c51;
+}
+.product .tittle h3{
+    margin-top: 5rem;
+    font-size: 2.4rem;
+}
+.product .tittle p{
+    margin-top: 1rem;
+}
+.product .cont{
+    display: inline-block;
+    width:80%;
+    background: #fff;
+}
+.product .cont .item {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    line-height: 8rem;
+}
+.product .cont .item div{
+    /* display: inline-block; */
+    border-left:1px solid #eee;
+}
+.product .cont .item .pro-tittle{
+    width: 30%;
+    text-align: center;
+
+}
+.product .cont .item .pro-info{
+    width: 50%;
+    font-size: 0;
+}
+.product .cont .item .pro-info p{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 50%;
+}
+.product .cont .item .pro-info p span{
+    font-size: 3rem;
+    width: 100%;
+    color: #2d78f4;
+}
+.product .cont .item .pro-info p span i{
+    font-size: 1.2rem;
+    color: #666;
+}
+.product .cont .item .goto{
+    width: 20%;
+}
+.product .cont .item .goto a{
+    display: block;
+    width:90%;
+    margin:2rem auto;
+    line-height: 4rem;
+    text-align: center;
+    color:#fff;
+    background: #2d78f4;
+    border-radius: 5px;
+}
+@media screen and (max-width:700px){
+    .product{
+        display: block;
+    }
+    .product .tittle{
+        width: 100%;
+    }
+    .product .tittle h3,
+    .product .tittle p{
+        display: inline-block;
+    }
+    .product .tittle h3{
+        margin:2rem 0;
+    }
+    .product .cont{
+        width: 100%;
+    }    
+}
+@media screen and (max-width:420px){
+    .product .cont .item{
+        flex-wrap: wrap;
+    }
+    .product .cont .item .goto{
+        width: 100%;
+        border-top: 1px solid #eee;
+    }
+    .product .cont .item .goto a{
+        margin:1rem auto;
+    }
+    .product .cont .item .pro-tittle{
+        width: 30%;
+    }
+    .product .cont .item .pro-info{
+        width: 60%;
+    }
+    
+}
+/* 主页尾部 */
+.foot{
+    width: 90%;
+    margin:0 auto;
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    border-top:2px solid #ccc;
+}
+.foot .foot-tittle{
+    flex-grow: 2;
+    width: 20%;
+    text-align: left;
+    padding: 4rem 0;
+}
+.foot .foot-tittle{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.foot .side-list{
+    flex-grow: 8;
+    display: flex;
+    width:80%;
+    vertical-align: middle;
+}
+.foot .side-list ul{
+    display: inline-block;
+    width: 20%;
+    margin-right: 2rem;
+}
+.foot .side-list ul li{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+.foot .side-list ul h4{
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+.foot .side-list ul li a{
+    color: #333
+}
+@media screen and (max-width:700px){
+    .foot .foot-tittle{
+        display:none;
+    }
+    .foot .side-list ul {
+        width: 25%;
+    }
+    .foot .side-list ul li {
+        font-size: 1.4rem;
+    }
+    .foot .side-list ul li h4 {
+        font-size: 1.6rem;
+    }
+
+
+}
+@media screen and (max-width:420px){
+    .foot .side-list ul li {
+        font-size: 1.2rem;
+    }
+    .foot .side-list ul li h4 {
+        font-size: 1.4rem;
+    }
+}
+
+/* 页脚 */
+footer{
+    width: 100%;
+    background: #eee;
+    color: #aaa;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+
+
